@@ -1,4 +1,10 @@
 <?php
+include 'quiz_functions.php';
+// getQuizData()関数を呼び出してデータを取得
+$arr = getQuizData();
+?>
+
+<?php
 // 入力された値の設定
 
 if (isset($_POST['times'])) {
@@ -16,18 +22,6 @@ if (isset($_POST['num_correct'])) {
 ?>
 
 <?php
-$question0 = ["かぞくはぜんぶでなんにんですか？", "4にん", "5にん", "6にん"];
-$question1 = ["いちばんちいさいのはだれですか？", "ぱぱ", "まま", "やまとくん"];
-$question2 = ["たんじょうびが1がつなのはだれですか？", "ゆなちゃん", "なおちゃん", "やまとくん"];
-$question3 = ["たんじょうびが8がつのおんなのこはだれですか？", "ぱぱ", "なおちゃん", "まま"];
-$question4 = ["いちばんおおきいおんなのこはだれですか？", "ぱぱ", "ゆなちゃん", "まま"];
-$question5 = ["いちばんとしうえなのはだれですか？", "ぱぱ", "まま", "ゆなちゃん"];
-$question6 = ["くるまにのるときにゆなちゃんのひだりにいるのはだれですか？", "なおちゃん", "やまとくん", "まま"];
-?>
-
-<?php
-$arr = [$question0, $question1, $question2, $question3, $question4, $question5, $question6];
-
 $response_left = $arr[$times][1];
 $response_center = $arr[$times][2];
 $response_right = $arr[$times][3];
@@ -46,9 +40,9 @@ $response_right = $arr[$times][3];
 <body>
     <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
         <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-            <header class="mb-8 flex items-center justify-between border-b py-4 md:mb-12 md:py-8 xl:mb-2">
+            <header class="mb-8 flex items-center justify-start border-b py-4 md:mb-12 md:py-8 xl:mb-2">
                 <!-- logo - start -->
-                <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
+                <a class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
                     <svg width="95" height="94" viewBox="0 0 95 94" class="h-auto w-6 text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M96 0V47L48 94H0V47L48 0H96Z" />
                     </svg>
@@ -68,7 +62,6 @@ $response_right = $arr[$times][3];
                 <!-- nav - end -->
 
                 <!-- buttons - start -->
-                <a href="#" class="hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block">けっかをみる</a>
 
                 <button type="button" class="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
@@ -81,7 +74,7 @@ $response_right = $arr[$times][3];
             </header>
 
             <section class="flex flex-col items-center">
-                <div class="flex max-w-xl flex-col items-center pb-16 pt-8 text-center lg:pb-48 lg:pt-32">
+                <div class="flex max-w-xl flex-col items-center pb-16 pt-8 text-center lg:pb-48 lg:pt-4">
                     <p class="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl">
                         <?php
                         $a = $times + 1;
