@@ -2,6 +2,8 @@
 PHPの勉強の一環で作成。配列、関数を使っている
 
 # DEMO
+![f_quiz](https://github.com/dyoshino88/f_quiz/assets/130971236/9dc86fff-b5c3-493f-a1ff-ffe744b7178c)
+
 
 # Features
 子供の暇つぶし兼勉強兼プログラムに興味を持ってもらうために作成<br>
