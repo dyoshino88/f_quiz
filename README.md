@@ -2,7 +2,8 @@
 クイズとポケモンが大好きな娘の遊び道具として作成。<br>
 
 # DEMO
-![f_quiz](https://github.com/dyoshino88/f_quiz/assets/130971236/9dc86fff-b5c3-493f-a1ff-ffe744b7178c)
+![kore](https://github.com/dyoshino88/f_quiz/assets/130971236/c4bff72a-54b0-4c8f-bbae-3077c91aff32)
+
 
 
 # Features
