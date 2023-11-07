@@ -38,7 +38,7 @@ function getQuizAnswer()
     // $answer = ["center", "right", "left", "center", "right", "left", "center", "right", "left", "center"];
     // return $answer;
 
-    $answer = ["left", "right", "center", "right", "center", "left", "center", "left", "left", "right"];
+    $answer = ["right", "left", "center", "left", "center", "right", "left", "center", "right", "left"];
     return $answer;
 
 
